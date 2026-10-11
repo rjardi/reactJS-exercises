@@ -1,7 +1,8 @@
 // Ejercicio 1: Cambiador de Color de Fondo
 // Cada vez que se pulsa el botón se genera un color aleatorio en hexadecimal
 
-const { useState } = React;
+import { useState } from 'react';
+import { createRoot } from 'react-dom/client';
 
 function CambiadorColor() {
   const [color, setColor] = useState('#ffffff');
@@ -45,5 +46,5 @@ function CambiadorColor() {
   );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = createRoot(document.getElementById('root'));
 root.render(<CambiadorColor />);

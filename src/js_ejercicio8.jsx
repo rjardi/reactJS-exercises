@@ -1,7 +1,8 @@
 // Ejercicio 8: Contador de Palabras y Caracteres
 // Los caracteres no incluyen espacios ni saltos de línea
 
-const { useState } = React;
+import { useState } from 'react';
+import { createRoot } from 'react-dom/client';
 
 function ContadorPalabras() {
   const [texto, setTexto] = useState('');
@@ -55,5 +56,5 @@ function ContadorPalabras() {
   );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = createRoot(document.getElementById('root'));
 root.render(<ContadorPalabras />);

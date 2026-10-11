@@ -1,7 +1,8 @@
 // Ejercicio 4: Filtro de Búsqueda en Tiempo Real
 // La lista se filtra mientras el usuario escribe
 
-const { useState } = React;
+import { useState } from 'react';
+import { createRoot } from 'react-dom/client';
 
 // Lista de animales predefinida
 const animales = [
@@ -64,5 +65,5 @@ function FiltroBusqueda() {
   );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = createRoot(document.getElementById('root'));
 root.render(<FiltroBusqueda />);

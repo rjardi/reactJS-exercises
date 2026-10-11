@@ -1,7 +1,8 @@
 // Ejercicio 7: Generador de Contraseñas Aleatorias
 // Genera una contraseña con letras, números y caracteres especiales
 
-const { useState } = React;
+import { useState } from 'react';
+import { createRoot } from 'react-dom/client';
 
 const CARACTERES = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;:,.<>?';
 
@@ -83,5 +84,5 @@ function GeneradorContrasena() {
   );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = createRoot(document.getElementById('root'));
 root.render(<GeneradorContrasena />);

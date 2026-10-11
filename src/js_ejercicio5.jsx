@@ -1,7 +1,8 @@
 // Ejercicio 5: Calculadora Sencilla
 // Dos campos numéricos y botones para las cuatro operaciones básicas
 
-const { useState } = React;
+import { useState } from 'react';
+import { createRoot } from 'react-dom/client';
 
 function Calculadora() {
   const [num1, setNum1] = useState('');
@@ -98,5 +99,5 @@ function Calculadora() {
   );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = createRoot(document.getElementById('root'));
 root.render(<Calculadora />);

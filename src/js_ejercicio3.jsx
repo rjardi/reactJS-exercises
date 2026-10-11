@@ -1,7 +1,8 @@
 // Ejercicio 3: Lista Dinámica
 // El usuario puede agregar y eliminar elementos de una lista
 
-const { useState } = React;
+import { useState } from 'react';
+import { createRoot } from 'react-dom/client';
 
 function ListaDinamica() {
   const [texto, setTexto] = useState('');
@@ -90,5 +91,5 @@ function ListaDinamica() {
   );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = createRoot(document.getElementById('root'));
 root.render(<ListaDinamica />);

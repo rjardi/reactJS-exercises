@@ -1,7 +1,8 @@
 // Ejercicio 2: Contador de Clics
 // Muestra cuántas veces se ha pulsado el botón
 
-const { useState } = React;
+import { useState } from 'react';
+import { createRoot } from 'react-dom/client';
 
 function ContadorClics() {
   const [clics, setClics] = useState(0);
@@ -45,5 +46,5 @@ function ContadorClics() {
   );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = createRoot(document.getElementById('root'));
 root.render(<ContadorClics />);

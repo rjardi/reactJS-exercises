@@ -4,34 +4,39 @@ Repositorio con los ejercicios de la primera entrega de ReactJS del máster. Son
 
 ## Tecnología
 
-Se usa React 18 directamente desde CDN junto con Babel Standalone para poder escribir JSX sin necesidad de configurar ningún entorno de compilación. Todo son ficheros estáticos, sin npm ni webpack ni nada por el estilo.
+Proyecto creado con React 18 y Vite. Vite se encarga del servidor de desarrollo y de compilar el JSX para producción. Es un proyecto multipágina: cada ejercicio tiene su propio HTML como entrada.
 
 ## Estructura
 
 ```
 index.html              → página de inicio con el índice de ejercicios
 js_ejercicio_1.html     → html del ejercicio 1
-js_ejercicio1.js        → lógica React del ejercicio 1
+src/js_ejercicio1.jsx   → componente React del ejercicio 1
 ...
+vite.config.js          → configuración de Vite (entradas de cada página)
 ```
 
-Cada ejercicio tiene su propio html y su propio js para tenerlo todo separado como pide el enunciado.
+Cada ejercicio tiene su propio html y su propio fichero de código para tenerlo todo separado como pide el enunciado.
 
 ## Cómo ejecutarlo en local
 
-Como los archivos cargan scripts externos no se pueden abrir directamente como fichero en el navegador, hace falta levantar un servidor local. Lo más fácil si tienes Python:
-
 ```bash
-python3 -m http.server 8000
+npm install
+npm run dev
 ```
 
-Luego abrir `http://localhost:8000` en el navegador.
+Luego abrir la URL que muestra la terminal (por defecto `http://localhost:5173`).
 
-Si no tienes Python pero sí Node.js:
+Para generar la versión de producción en `dist/`:
 
 ```bash
-npx serve .
+npm run build
+npm run preview
 ```
+
+## Despliegue
+
+Cada push a `main` lanza un workflow de GitHub Actions que compila el proyecto y lo publica en GitHub Pages.
 
 ## Ejercicios
 
@@ -47,4 +52,4 @@ npx serve .
 
 ## Demo
 
-Disponible en GitHub Pages: (enlace pendiente de subir)
+Disponible en GitHub Pages: https://rjardi.github.io/reactJS-exercises/

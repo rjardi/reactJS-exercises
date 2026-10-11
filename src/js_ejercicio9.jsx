@@ -1,7 +1,8 @@
 // Ejercicio 9: Lista de Tareas con LocalStorage
 // Las tareas se guardan en localStorage para que no se pierdan al recargar
 
-const { useState, useEffect } = React;
+import { useState, useEffect } from 'react';
+import { createRoot } from 'react-dom/client';
 
 function ListaTareas() {
   // Al inicializar el estado, intentamos cargar las tareas guardadas
@@ -142,5 +143,5 @@ function ListaTareas() {
   );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = createRoot(document.getElementById('root'));
 root.render(<ListaTareas />);

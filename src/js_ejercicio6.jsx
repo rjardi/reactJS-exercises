@@ -1,7 +1,8 @@
 // Ejercicio 6: Temporizador con Inicio, Pausa y Reinicio
 // Usa useEffect para manejar el intervalo y limpiar cuando toca
 
-const { useState, useEffect } = React;
+import { useState, useEffect } from 'react';
+import { createRoot } from 'react-dom/client';
 
 function Temporizador() {
   const [segundos, setSegundos] = useState(0);
@@ -78,5 +79,5 @@ function Temporizador() {
   );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = createRoot(document.getElementById('root'));
 root.render(<Temporizador />);
